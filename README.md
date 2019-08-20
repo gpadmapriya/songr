@@ -9,6 +9,6 @@
 - Run SongrApplication in IntelliJ
 - Routes should be available when trying from localhost at port 8080 (http://localhost/8080)
 
-[Code](https://github.com/gpadmapriya/songr/blob/master/src/main/java/com.example.songr)
+[Code](https://github.com/gpadmapriya/songr/tree/master/src/main/java/com/example/songr)
 
-[Test Cases](https://github.com/gpadmapriya/songr/blob/master/src/test/java/com.example.songr)
+[Test Cases](https://github.com/gpadmapriya/songr/tree/master/src/test/java/com/example/songr)
