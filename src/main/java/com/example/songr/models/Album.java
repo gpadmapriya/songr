@@ -24,6 +24,10 @@ public class Album {
         this.imageurl = imageUrl;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -32,7 +36,7 @@ public class Album {
         return artist;
     }
 
-    public int getSongCount() {
+    public int getSongcount() {
         return songcount;
     }
 
@@ -40,7 +44,7 @@ public class Album {
         return length;
     }
 
-    public String getImageUrl() {
+    public String getImageurl() {
         return imageurl;
     }
 }

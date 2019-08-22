@@ -8,23 +8,30 @@
 <h1>All Albums</h1>
 
 <div th:each="album : ${albums}">
-    <h3 th:id="${album.id}" th:text="${album.title}">Title</h3>
-    <span th:text="${album.artist}">Artist</span>
-    <span th:text="${album.songcount}">Song Count</span>
-    <span th:text="${album.length}">Length in minutes</span>
-    <span th:text="${album.imageurl}">Image URL</span>
-
+    <h3 th:id="${album.title}" th:text="${album.title}">Album Title</h3>
+    <ul style="list-style-type:none">
+        <li><b>Artist:</b> <span th:id="${album.artist}" th:text="${album.artist}"></span></li>
+        <li><b>Song Count:</b> <span th:id="${album.songcount}" th:text="${album.songcount}"></span> songs</li>
+        <li><b>Length:</b> <span th:id="${album.length}" th:text="${album.length}"></span> seconds</li>
+        <li>
+            <img th:src="${album.imageurl}" alt="cover image" width="100">
+        </li>
+    </ul>
 </div>
-
 <div>
     <form method="POST" action="/albums">
-        Title:<input name="title" />
-        Artist:<input name="artist" />
-        Song Count:<input name="songcount" />
-        Length:<input name="length" />
-        Image URL:<input name="imageurl" />
-        <input type="submit" />
-    </form>
+
+            <legend>Add a New Album</legend>
+
+                <label>Title: </label><input type="text" name="title"/>
+                <label>Artist: </label><input type="text" name="artist"/>
+                <label>Song Count: </label><input type="number" name="songcount"/>
+                <label>Length: </label><input type="number" name="length"/>
+                <label>Image URL: </label><input type="text" name="imageurl"/>
+                <input type="submit"/>
+
+
+        </form>
 </div>
 
 
