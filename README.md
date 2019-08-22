@@ -9,6 +9,10 @@
 - Create an Album model. It should have an artist, title, song count, length in seconds and an album cover image.
 - A user should be able to see information about all the albums on the site.
 - A user should be able to add albums to the site.
+- Create a Song model. A Song has title, length, tracknumber and album details
+- User should be able to see information about all songs on the site
+- User should be able to view a page with data about one particular album
+- User should be able to add songs to an album and see songs that belong to that album
 
 #### To Run
 - Spring MVC should be running

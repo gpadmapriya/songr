@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Album</title>
+</head>
+<body>
+<h3 th:text="${album}"></h3>
+
+<div th:each="song : ${album.songs}">
+
+    <ul style="list-style-type:none">
+        <li><b>Song Title:</b> <span th:text="${song.title}"></span></li>
+        <li><b>Length in Seconds:</b> <span th:text="${song.lengthInSeconds}"></span> seconds</li>
+
+    </ul>
+
+</div>
+
+<h3>Add a new song to the Album!</h3>
+<!-- create the route that listens for this post and creates a new movie with the director whose id is in the path -->
+<form method="POST" th:action="${'/albums/' + album.id}">
+    <label>Title: </label><input type="text" name="title"/>
+    <label>Length(in seconds): </label><input type="number" name="lengthInSeconds"/>
+    <label>Track Number: </label><input type="number" name="trackNumber"/>
+    <input type="hidden" name="id" th:value="${album.id}">
+    <input type="submit" />
+</form>
+
+</body>
+</html>
