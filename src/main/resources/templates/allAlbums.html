@@ -5,10 +5,14 @@
     <title>Albums</title>
 </head>
 <body>
-<h1>All Albums</h1>
+<h3>All Albums</h3>
 
 <div th:each="album : ${albums}">
-    <h3 th:id="${album.title}" th:text="${album.title}">Album Title</h3>
+    <!--<h3 th:id="${album.id}" th:text="${album.title}">Album Title</h3>
+    <h3 th:id="${album.id}" th:text="${album.title}">Album Title</h3>-->
+    <p>
+        <a th:href="${ '/albums/' + album.id}">Album Title: <span th:text="${album.title}"></span></a>
+    </p>
     <ul style="list-style-type:none">
         <li><b>Artist:</b> <span th:id="${album.artist}" th:text="${album.artist}"></span></li>
         <li><b>Song Count:</b> <span th:id="${album.songcount}" th:text="${album.songcount}"></span> songs</li>
