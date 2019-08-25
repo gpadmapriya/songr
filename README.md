@@ -13,6 +13,7 @@
 - User should be able to see information about all songs on the site
 - User should be able to view a page with data about one particular album
 - User should be able to add songs to an album and see songs that belong to that album
+- Add a custome error template for the app, one that does not read 'Whitelabel error page'
 
 #### To Run
 - Spring MVC should be running
