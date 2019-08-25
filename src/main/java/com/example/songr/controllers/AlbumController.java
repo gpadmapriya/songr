@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
@@ -56,6 +57,11 @@ public class AlbumController {
         List<Song> songs = songRepository.findAll();
         m.addAttribute("songs", songs);
         return "songs";
+    }
+    /*https://www.logicbig.com/tutorials/spring-framework/spring-boot/custom-thymeleaf-error-page.html*/
+    @RequestMapping("/")
+    public void handleError(){
+        throw new RuntimeException("exception");
     }
 
 }

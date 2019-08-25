@@ -8,6 +8,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -21,9 +23,10 @@ public class SongrApplicationTests {
 	private MockMvc mockMvc;
 
 	@Test
-	public void contextLoads() {
+	public void contextLoads() throws Exception {
 		HomeController hc = new HomeController();
 		assertEquals("World Hello", hc.reverseSentence("Hello World"));
+		//this.mockMvc.perform(MockMvcRequestBuilders.get("/").andDo(MockMvcResultHandlers.print()));
 	}
 
 }
